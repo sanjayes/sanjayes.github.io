@@ -1,22 +1,13 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-	<script src='dist/fhir-client-v2.js'>
-	</script>
-</head>
-
-<body>
-	<p>Hello, I am the page "launch.html"</p>
-
-	<script>
-		FHIR.oauth2.authorize({
-      'client_id': '19f2216b-cfd4-4d57-bbc3-7068d1a66da5',
-      'scope':  'openid fhirUser launch launch/patient',	
-      'redirect_uri': 'https://github.com/rajakushwah/epicpatientapp/app.html'
-    });
-	</script>
-
-</body>
-
+  <head>
+    <script src="node_modules/fhirclient/fhir-client.js"></script>
+    <script>
+      FHIR.oauth2.authorize({
+        "client_id": "my_web_app",
+        "scope"    : "openid profile"
+      });
+    </script>
+  </head>
+  <body>Loading...</body>
 </html>
